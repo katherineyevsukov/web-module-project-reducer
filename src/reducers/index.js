@@ -3,6 +3,7 @@ import {
   APPLY_NUMBER,
   CHANGE_OPERATION,
   CLEAR_DISPLAY,
+  ADD_TO_MEMORY
 } from "./../actions";
 
 export const initialState = {
@@ -46,8 +47,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: 0,
-        operation: "+"
+        operation: "+",
       };
+
+    case ADD_TO_MEMORY:
+        return {
+            ...state,
+            memory: state.total
+        }
 
     default:
       return state;
