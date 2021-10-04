@@ -46,6 +46,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         total: 0,
+        operation: "+"
       };
 
     default:
